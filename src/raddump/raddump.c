@@ -6304,6 +6304,7 @@ coff_print_symbol_table(Arena              *arena,
 
     rd_printf("%-4s %-8s %-10s %-4s %-4s %-4s %-16s %-20s", 
                 "No.", "Value", "SectNum", "Aux", "Msb", "Lsb", "Storage", "Name");
+    rd_printf("---- -------- ---------- ---- ---- ---- ---------------- --------------------");
 
     for (U64 i = 0; i < symbols.count; ++i) {
       COFF_Symbol32 *symbol        = &symbols.v[i];

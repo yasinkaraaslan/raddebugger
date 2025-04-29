@@ -295,32 +295,32 @@ coff_string_from_sym_storage_class(COFF_SymStorageClass x)
 {
   switch (x) {
     case COFF_SymStorageClass_Null:            break;
-    case COFF_SymStorageClass_EndOfFunction:   return str8_lit("EndOfFunction");
+    case COFF_SymStorageClass_EndOfFunction:   return str8_lit("EOF");
     case COFF_SymStorageClass_Automatic:       return str8_lit("Automatic");
     case COFF_SymStorageClass_External:        return str8_lit("External");
     case COFF_SymStorageClass_Static:          return str8_lit("Static");
     case COFF_SymStorageClass_Register:        return str8_lit("Register");
-    case COFF_SymStorageClass_ExternalDef:     return str8_lit("Def");
+    case COFF_SymStorageClass_ExternalDef:     return str8_lit("ExternalDef");
     case COFF_SymStorageClass_Label:           return str8_lit("Label");
     case COFF_SymStorageClass_UndefinedLabel:  return str8_lit("UndefinedLabel");
-    case COFF_SymStorageClass_MemberOfStruct:  return str8_lit("Struct");
+    case COFF_SymStorageClass_MemberOfStruct:  return str8_lit("MOS");
     case COFF_SymStorageClass_Argument:        return str8_lit("Argument");
     case COFF_SymStorageClass_StructTag:       return str8_lit("Tag");
-    case COFF_SymStorageClass_MemberOfUnion:   return str8_lit("Union");
+    case COFF_SymStorageClass_MemberOfUnion:   return str8_lit("MOU");
     case COFF_SymStorageClass_UnionTag:        return str8_lit("Tag");
     case COFF_SymStorageClass_TypeDefinition:  return str8_lit("Definition");
     case COFF_SymStorageClass_UndefinedStatic: return str8_lit("Static");
     case COFF_SymStorageClass_EnumTag:         return str8_lit("Tag");
-    case COFF_SymStorageClass_MemberOfEnum:    return str8_lit("Enum");
-    case COFF_SymStorageClass_RegisterParam:   return str8_lit("Param");
-    case COFF_SymStorageClass_BitField:        return str8_lit("Field");
+    case COFF_SymStorageClass_MemberOfEnum:    return str8_lit("MOE");
+    case COFF_SymStorageClass_RegisterParam:   return str8_lit("RegisterParam");
+    case COFF_SymStorageClass_BitField:        return str8_lit("BitField");
     case COFF_SymStorageClass_Block:           return str8_lit("Block");
     case COFF_SymStorageClass_Function:        return str8_lit("Function");
-    case COFF_SymStorageClass_EndOfStruct:     return str8_lit("Struct");
+    case COFF_SymStorageClass_EndOfStruct:     return str8_lit("EOS");
     case COFF_SymStorageClass_File:            return str8_lit("File");
     case COFF_SymStorageClass_Section:         return str8_lit("Section");
-    case COFF_SymStorageClass_WeakExternal:    return str8_lit("External");
-    case COFF_SymStorageClass_CLRToken:        return str8_lit("Token");
+    case COFF_SymStorageClass_WeakExternal:    return str8_lit("WeakExternal");
+    case COFF_SymStorageClass_CLRToken:        return str8_lit("CLRToken");
   }
   return str8_zero();
 }
