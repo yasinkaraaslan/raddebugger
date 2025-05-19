@@ -8,7 +8,7 @@ coff_align_size_from_section_flags(COFF_SectionFlags flags)
   U32 align_index = COFF_SectionFlags_ExtractAlign(flags);
   switch (align_index) {
     default: break;
-    case 0:                           align = 1;    break; // alignment isn't specified, default to 1
+    case COFF_SectionAlign_None:      align = 0;    break;
     case COFF_SectionAlign_1Bytes:    align = 1;    break;
     case COFF_SectionAlign_2Bytes:    align = 2;    break;
     case COFF_SectionAlign_4Bytes:    align = 4;    break;
@@ -32,6 +32,7 @@ coff_section_flag_from_align_size(U64 align)
 {
   COFF_SectionFlags flags = 0;
   switch (align) {
+  case 0:    flags = COFF_SectionAlign_None;      break;
   case 1:    flags = COFF_SectionAlign_1Bytes;    break;
   case 2:    flags = COFF_SectionAlign_2Bytes;    break;
   case 4:    flags = COFF_SectionAlign_4Bytes;    break;
